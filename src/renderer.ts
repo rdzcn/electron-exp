@@ -28,4 +28,7 @@
 
 import './index.css';
 import './index.tsx';
+
 console.log('👋 This message is being logged by "renderer.js", included via webpack');
+console.log(`This app is using Chrome (v${window.preloadAPI.chrome()}), Node.js (v${window.preloadAPI.node()}), and Electron (v${window.preloadAPI.electron()})`)
+console.log('Ping:', window.preloadAPI.ping().then(console.log))
